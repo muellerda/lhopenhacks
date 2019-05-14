@@ -12,7 +12,7 @@ You can view the api documentation in swagger-ui by pointing to
 [http://localhost:8080/api/swagger-ui.html](http://localhost:8080/api/swagger-ui.html)
 
 Change default port value in `src/main/resources/application.properties`
-
+ dsfafa
 ## Build the project
 
 1. Install Maven [https://maven.apache.org/install.html](https://maven.apache.org/install.html) and setup the environment path accordingly
