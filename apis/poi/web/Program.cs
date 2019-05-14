@@ -10,6 +10,8 @@ using Microsoft.Extensions.Logging;
 using poi.Utility;
 namespace poi
 {
+    using System.Net;
+
     public class Program
     {
         public static void Main(string[] args)
@@ -31,7 +33,7 @@ namespace poi
             .Build();
 
             var host = new WebHostBuilder()
-                .UseKestrel()
+                .UseKestrel().PreferHostingUrls(true)
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseConfiguration(configuration)
                 .UseIISIntegration()
@@ -56,5 +58,7 @@ namespace poi
             return host;
 
         }
+
+
     }
 }

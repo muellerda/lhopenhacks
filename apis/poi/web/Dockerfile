@@ -15,8 +15,8 @@ COPY ./appsettings.json /app/out/
 FROM microsoft/dotnet:2.1-aspnetcore-runtime
 WORKDIR /app
 
-ENV SQL_USER="YourUserName" \
-SQL_PASSWORD="changeme" \
+ENV SQL_USER="openhackhtu5sa" \
+SQL_PASSWORD="pK1xx9Xf1pwd" \
 SQL_SERVER="changeme.database.windows.net" \
 SQL_DBNAME="mydrivingDB" \
 WEB_PORT="8080" \
