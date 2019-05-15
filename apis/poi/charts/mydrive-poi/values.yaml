@@ -12,7 +12,7 @@ green:
 
 replicaCount: 2
 repository: 
-  image: openhackhtu5acr.azurecr.io/devopsoh/api-poi
+  image: openhackhtu5acr.azurecr.io/muellerda/lhopenhacks
   pullPolicy: Always
 image:
   name: mydrive-poi
