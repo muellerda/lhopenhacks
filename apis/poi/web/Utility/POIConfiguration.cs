@@ -11,11 +11,21 @@ namespace poi.Utility
     {
         public static string GetConnectionString(IConfiguration configuration)
         {
+            //ENV SQL_USER = "openhackhtu5sa" \
+            //SQL_PASSWORD = "pK1xx9Xf1pwd" \
+            //SQL_SERVER = "openhackhtu5sql.database.windows.net" \
+            //SQL_DBNAME = "mydrivingDB" \
+
             var SQL_USER = configuration.GetSection("SQL_USER").Value;
             var SQL_PASSWORD = configuration.GetSection("SQL_PASSWORD").Value;
             var SQL_SERVER = configuration.GetSection("SQL_SERVER").Value;
             var SQL_DBNAME = configuration.GetSection("SQL_DBNAME").Value;
 
+            SQL_USER = "openhackhtu5sa";
+            SQL_PASSWORD = "pK1xx9Xf1pwd";
+            SQL_SERVER = "openhackhtu5sql.database.windows.net";
+            SQL_DBNAME = "mydrivingDB";
+            
             var connectionString = configuration["ConnectionStrings:myDrivingDB"];
 
             connectionString = connectionString.Replace("[SQL_USER]", SQL_USER);
