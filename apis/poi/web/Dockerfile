@@ -17,7 +17,7 @@ WORKDIR /app
 
 ENV SQL_USER="openhackhtu5sa" \
 SQL_PASSWORD="pK1xx9Xf1pwd" \
-SQL_SERVER="openhackhtu5sa.database.windows.net" \
+SQL_SERVER="openhackhtu5sql.database.windows.net" \
 SQL_DBNAME="mydrivingDB" \
 WEB_PORT="8080" \
 WEB_SERVER_BASE_URI="http://0.0.0.0" \
