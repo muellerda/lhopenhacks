@@ -10,8 +10,6 @@ using Microsoft.Extensions.Logging;
 using poi.Utility;
 namespace poi
 {
-    using System.Net;
-
     public class Program
     {
         public static void Main(string[] args)
@@ -21,19 +19,21 @@ namespace poi
 
         }
 
-        public static IWebHost BuildWebHost(string[] args) {
+        public static IWebHost BuildWebHost(string[] args)
+        {
 
             return CreateWebHostBuilder(args).Build();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) {
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args)
+        {
             //used to read env variables for host/port
             var configuration = new ConfigurationBuilder()
             .AddEnvironmentVariables()
             .Build();
 
             var host = new WebHostBuilder()
-                .UseKestrel().PreferHostingUrls(true)
+                .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseConfiguration(configuration)
                 .UseIISIntegration()
@@ -58,7 +58,5 @@ namespace poi
             return host;
 
         }
-
-
     }
 }
